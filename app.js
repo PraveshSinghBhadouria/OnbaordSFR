@@ -10,6 +10,9 @@ var usersRouter = require('./routes/users');
 var onboardRouter = require('./routes/onboard');
 var jmlRouter = require('./routes/jml');
 var registerRouter = require('./routes/register');
+var joinerRouter = require('./routes/joiner');
+var MoverFormRouter = require('./routes/MoverForm');
+var offboardRouter = require('./routes/offboard');
 
 var app = express();
 
@@ -29,6 +32,9 @@ app.use('/users', usersRouter);
 app.use('/onboard', onboardRouter);
 app.use('/jml', jmlRouter);
 app.use('/register', registerRouter);
+app.use('/joiner', joinerRouter);
+app.use('/moverForm', MoverFormRouter);
+app.use('/offboard', offboardRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
